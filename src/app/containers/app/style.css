@@ -1,0 +1,11 @@
+.appContainer {
+    padding: 0;
+    margin: 51px;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}

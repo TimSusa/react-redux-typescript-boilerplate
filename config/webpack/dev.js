@@ -103,7 +103,7 @@ var config = {
 
   plugins: [
     new ManifestPlugin({
-      fileName: '../manifest.json'
+        fileName: '../manifest.json'
     }),
     new webpack.DefinePlugin({
       'process.env': {

@@ -1,0 +1,12 @@
+.albumlist {
+    /*background: lightgray;*/
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.item {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px;
+    list-style: none;
+}

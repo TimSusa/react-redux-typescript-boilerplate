@@ -36,11 +36,11 @@ describe('Counter Module', () => {
       const action: ICounterAction = { type: counter.DECREMENT };
       expect(counter.counterReducer(state, action)).to.be.eql({ count: state.count - 1 });
     });
-
-    it('handles actions with unknown type', function() {
+    /* tslint:disable */
+    it('handles actions with unknown type', function () { 
       expect(counter.counterReducer(state, { type: '' })).to.be.eql({ count: state.count });
     });
-
+    /* tslint:enable */
   });
 
 });

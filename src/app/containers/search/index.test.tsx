@@ -1,10 +1,10 @@
 import { expect } from 'chai';
 import { renderComponent } from '../../helpers/TestHelper';
-import { About } from './index';
+import { Search } from './index';
 
-describe('<About />', () => {
+describe('<Search />', () => {
 
-  const component = renderComponent(About);
+  const component = renderComponent(Search);
 
   it('Renders with correct style', () => {
     const s = require('./style.css');
@@ -12,7 +12,7 @@ describe('<About />', () => {
   });
 
   it('Renders header with text', () => {
-    expect(component.find('h4').text()).to.eql('About');
+    expect(component.find('h4').text()).to.eql('Search');
   });
 
 });

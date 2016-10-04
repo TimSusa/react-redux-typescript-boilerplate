@@ -20,7 +20,7 @@ const manifest = require('../build/manifest.json');
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
-const Chalk = require('chalk');
+// const Chalk = require('chalk');
 const favicon = require('serve-favicon');
 
 const app = express();
@@ -87,12 +87,10 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(appConfig.port, appConfig.host, err => {
+app.listen(appConfig.port, (err) => {
   if (err) {
-    console.error(Chalk.bgRed(err));
+    console.log('ERROR: ', err);
   } else {
-    console.info(Chalk.black.bgGreen(
-      `\n\n💂  Listening at http://${appConfig.host}:${appConfig.port}\n`
-    ));
+    console.log('Application is running on port: ', appConfig.port);
   }
 });

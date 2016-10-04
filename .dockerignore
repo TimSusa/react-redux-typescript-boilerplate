@@ -36,7 +36,9 @@ node_modules
 .DS_STORE
 
 # TypeScript
-typings
+#typings
 
 # Git
 .git
+.idea
+.vscode

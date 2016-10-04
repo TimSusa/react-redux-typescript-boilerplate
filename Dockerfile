@@ -1,12 +1,20 @@
-FROM mhart/alpine-node:latest
+FROM node:argon
 
-MAINTAINER Barbar Startup Factory hey@barbar.com.tr
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-WORKDIR /app
-ADD . .
-
+# Install app dependencies
+COPY package.json /usr/src/app/
 RUN npm install
 
-EXPOSE 8889
+# Bundle app source
+COPY . /usr/src/app
 
-CMD ["npm", "run", "start:prod"]
+EXPOSE 8080
+
+CMD ["npm", "run", "postinstall"]
+CMD ["npm", "run", "prebuild"]
+CMD ["npm", "run", "build"]
+CMD ["npm", "run", "postbuild"]
+CMD ["npm", "run", "start"]
