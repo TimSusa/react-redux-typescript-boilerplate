@@ -12,11 +12,12 @@ class App extends React.Component<any, any> {
         <section className={s.appContainer}>
           <Helmet {...appConfig.app} {...appConfig.app.head}/>
           <Header />
-          <div className="container">
+          <div className="container-fluid">
             {this.props.children}
           </div>
+          <Footer />
         </section>
-        <Footer />
+
       </div>
     );
   }
